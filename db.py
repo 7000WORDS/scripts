@@ -1,19 +1,16 @@
 import socket
-import json
+import mysql.connector
 
 
+mydb = mysql.connector.connect(
+    host= "localhost",
+    passwd= "okwudili2009tooradmin#",
+    user= "newuser",
+    database = "mydatabase",
+)
 
-name = socket.gethostname()
-ip = socket.gethostbyname(name)
-
-mjson = {"name ": [name],
-         "ip " :[ip]}
-with open("mjson.json", "w") as write_file:
-    json.dump(mjson, write_file)
-
-
+print(mydb)
 
 
-
-
-
+mycursor = mydb.server_host
+print(mycursor)
