@@ -32,5 +32,3 @@ print(mycursor.rowcount, "record inserted.")
 mycursor.execute("SELECT * FROM customers")
 myresult = mycursor.fetchall()
 print(myresult)
-
-print(socket.gethostbyname("AUSTIN-PC"))
